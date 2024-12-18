@@ -8,8 +8,14 @@
 }
 
 body {
-  background-color: #c9d6ff;
-  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  /* background-image: url('https://example.com/tu-imagen.jpg'); URL de la imagen */
+
+  background-color: #eff6ff; /* Fondo suave azul claro */
+  background: linear-gradient(
+    to right,
+    #e0f7fa,
+    #eff6ff
+  ); /* Degradado azul claro */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,9 +24,9 @@ body {
 }
 
 .container {
-  background-color: #fff;
+  background-color: #ffffff; /* Fondo blanco para el contenedor */
   border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
   position: relative;
   overflow: hidden;
   width: 768px;
@@ -33,36 +39,54 @@ body {
   line-height: 20px;
   letter-spacing: 0.3px;
   margin: 20px 0;
+  color: #ffffff; /* Texto oscuro para contraste */
 }
 
 .container span {
   font-size: 12px;
+  color: #6b7280; /* Gris medio para texto secundario */
 }
 
 .container a {
-  color: #333;
+  color: #3b82f6; /* Azul brillante para los enlaces */
   font-size: 13px;
   text-decoration: none;
   margin: 15px 0 10px;
 }
 
 .container button {
-  background-color: #512da8;
-  color: #fff;
+  background-color: #ffffff; /* Fondo blanco para el botón */
+  color: #3b82f6; /* Texto azul brillante */
   font-size: 12px;
   padding: 10px 45px;
-  border: 1px solid transparent;
+  border: 2px solid #3b82f6; /* Borde azul brillante */
   border-radius: 8px;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-top: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #3b82f6; /* Fondo azul brillante en hover */
+  color: #fff; /* Texto blanco en hover */
+}
+
+.container button.selected {
+  background-color: #3b82f6; /* Fondo azul brillante cuando se selecciona */
+  color: #ffffff; /* Texto blanco cuando se selecciona */
+}
+
+.container button.selected:hover {
+  background-color: #2563eb; /* Fondo más oscuro de azul cuando se pasa el ratón */
+  color: #ffffff; /* Mantener el texto blanco */
 }
 
 .container button.hidden {
-  background-color: transparent;
-  border-color: #fff;
+  background-color: 1px solid #ffffff; /* Fondo blanco cuando está oculto */
+  border-color: #2563eb; /* Bordes azules cuando está oculto */
 }
 
 .container form {
@@ -76,8 +100,8 @@ body {
 }
 
 .container input {
-  background-color: #eee;
-  border: none;
+  background-color: #f1f5f9; /* Fondo gris suave para los inputs */
+  border: 1px solid #d1d5db; /* Borde gris claro */
   margin: 8px 0;
   padding: 10px 15px;
   font-size: 13px;
@@ -135,14 +159,21 @@ body {
 }
 
 .social-icons a {
-  border: 1px solid #ccc;
-  border-radius: 20%;
+  border: 1px solid #e2e8f0; /* Borde claro para los íconos */
+  border-radius: 50%; /* Íconos redondeados */
   display: inline-flex;
   justify-content: center;
   align-items: center;
   margin: 0 3px;
   width: 40px;
   height: 40px;
+  background-color: #ffffff; /* Fondo blanco para los íconos */
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #3b82f6; /* Azul brillante al pasar el cursor */
+  border-color: #3b82f6; /* Cambio de borde cuando está activo */
 }
 
 .toggle-container {
@@ -163,9 +194,13 @@ body {
 }
 
 .toggle {
-  background-color: #512da8;
+  background-color: #3b82f6; /* Azul brillante para el toggle */
   height: 100%;
-  background: linear-gradient(to right, #5c6bc0, #512da8);
+  background: linear-gradient(
+    to right,
+    #3b82f6,
+    #2563eb
+  ); /* Degradado de azul */
   color: #fff;
   position: relative;
   left: -100%;
